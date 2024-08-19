@@ -1,0 +1,131 @@
+For Revision
+-------------------------------------------list interface-------------------------------------------------------
+1--ArrayList: 
+- Used when fast access is required and thread-safety is not required.
+Access: O(1) (constant time) for accessing elements by index.
+Insertion/Deletion: O(n) (linear time) for adding/removing elements, especially if done in the middle of the list.
+
+- Internally uses dynamic array to store the element. dynamic array it would be resizeable. it would be expand or shrink. based on the insertion and deletion.
+- Not Synchronized means does not provide thread-safety : means multiple people can access/execute the task or the resource at the same time.
+
+2--LinkedList:
+- used when we need efficient insertion and deletion. 
+Performance:
+Access: O(n) (linear time) for accessing elements by index.
+Insertion/Deletion: O(1) (constant time) for adding/removing elements at the beginning or end.
+
+- Internally uses doubly-linked-list.
+- Not Synchronized.
+
+3--Vector:
+- Synchronized
+- Used when thread-safety is required and speed does not matter.
+- Internally usses dynamic array.
+- Same as Arraylist but the only difference it is synchronized.
+-
+
+4--Stack: 
+- Synchronized
+- Stack is a subclass of Vector that implements a last-in-first-out (LIFO) stack of elements.
+Performance:
+Access: O(1) (constant time) for accessing elements.
+Insertion/Deletion: O(1) (constant time) for pushing/popping elements.
+Suitable for applications that require LIFO behavior.
+
+
+
+
+
+---------------------------------------------Set Interface-------------------------------------------------------------
+Does not allow duplicate elements.
+
+1- HashSet:
+
+Internal Working: Internally usage hashing to store the element.
+
+Order: It does not maintain any order of elements. element are sorted based on the hashCode.
+
+Complexity: Provides O(1) time complexity for basic operations like add, remove, and contains.
+
+Null Elements: Allows one null element.
+
+Usage: use when duplicate not allowed and order does not matter, fast access element due to hashing
+ 
+
+
+2- TreeSet
+
+Internal working: Internally usage Red black tree which is self balancing binary search tree.
+
+Order: return sorted set.
+
+Complexity: Log(n) for basic operation like add, remove, contains.
+
+Null Elemets: Does not allow null value. else throw NuLLPointerException.
+
+Usage: use when you need sorted set. and null value does not Allow.
+
+
+3- LinkedHashSet
+
+Internal working: Internally usage hash table and doubly linkedList for storing the element.
+
+Order: maintain insertion order.
+
+Complexity: O(1) time complexity for basic operation. add, remove, contains
+
+Null Elements: Allow one null value 
+
+Usage: use when insertion order matter.
+
+
+
+
+
+
+
+
+---------------------------------------------Queue Interface-----------------------------------------------------------
+1-ArrayDeque
+
+- ArrayDeque stand for Array double ended queue means insertion and deletion happen from both end.
+- Internally uses array , stack and queue - when insertion and deletion happen for different end called queue and when same end called stack.
+- O(1) constant time for insertion and deletion. from both end.
+- Maintains the order of elements as they are added. 
+
+2-PriorityQueue
+
+- Internally uses Binary seach tree to store the element.
+- element are stored based on the highest priority.
+- O(log(n)) for insertion and deletion . O(1) for accessing highest priority element.
+- ordered elements based on their priority.
+
+
+
+
+
+
+---------------------------------------------Map-Interface-------------------------------------------------------------
+ 
+store elements in a key-value pair.
+
+1-HashMap:
+- use when sorting does not matter.
+- internally uses array of bucket and each bucket is a linked list or balance tree.
+- allow only one null key and multiple null value.
+- constant time O(1) for basic operation get, put, remove
+
+2-TreeMap:
+- use when sorted map is required.
+- internally uses red black tree which is a self balancing binary search tree for storing the element.
+- Does not allow null key but allow multiple null value.  
+- O(log(n)) time for basic operation.
+
+
+3-LinkedHashMap: 
+- use when insertion order matter.
+- internally uses hash table and doubly linked list for storing the element the map. - hash table used for fast access and doubly linked maintains the insertion order.
+- allow only one null key and multiple null value.
+- constant time O(1) time for basic operation
+
+

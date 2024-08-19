@@ -1,0 +1,589 @@
+
+
+
+1. fibonnaci series - sum of previous 2 term - 0112358
+
+#include<iostream> 
+using namespace std; 
+
+int fib(int n){ 
+
+    int a = 0, b = 1, c, i; 
+
+    if( n == 0){
+    return a; 
+}
+
+    for(i = 2; i <= n; i++) 
+
+    { 
+       c = a + b; 
+       a = b; 
+       b = c; 
+     } 
+
+    return b; 
+} 
+
+int main() 
+{ 
+
+    int n = 4;
+
+    cout << fib(n); 
+
+    return 0; 
+}
+
+
+
+2 - Palindrome Number - 151
+
+
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    int n,r,t,sum=0;
+    cout<<"Enter the Number: "<<endl;
+    cin>>n;
+    t=n;
+
+    while(n!=0){                                 r= 151%10= 1, sum=1,  n= 151/10 = 15 
+        r=n%10;                                   r= 15%10 = 5, sum=51, n= 15/10 = 1      
+        sum = sum*10+r;                           r= 1%10 = 0, sum=151,                        
+        n=n/10;
+    }
+
+    if(t==sum){
+        cout<<"Palindrome Number : "<<sum<<endl;
+    }
+    else{
+        cout<<"Not a Palindrome Number : "<<sum<<endl;
+    }
+return 0;
+}
+
+
+
+
+
+
+3 - Armstrong Number - 153 1^3+5^3+3^3 = 153
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int n, r,t,sum = 0;
+    cout<<"Enter  a number :"<<endl;
+    cin>>n;
+
+    t=n;
+    while(n!=0){
+        r=n%10;
+        sum = sum + r*r*r;
+        n=n/10;
+    }
+
+    if(t==sum){
+        cout<<"Armstrong Number : "<<sum<<endl;
+    }
+
+    else{
+        cout<<"Not a Armstrong Number : "<<sum<<endl;
+    }
+
+    return 0;
+}
+
+
+4- Prime Number  upto n number of prime number
+
+#include<iostream>
+using namespace std;
+
+int main(){
+
+
+    int i,j,n;
+    cout<<"Enter the number : "<<endl;
+    cin>>n;
+
+     for(i =2; i<n; i++){
+        for(j=2; j<i; j++){
+
+            if(i%j==0){
+                cout<<"";
+                break;
+        }
+        }
+
+        if(j==i){
+            cout<<j;
+        }
+
+     }
+
+ return 0;
+}
+
+
+5- Check number is prime or not
+
+#include<iostream>
+using namespace std;
+
+int main() {
+    int n, count=0;
+    
+    cout<<"enter a number"<<endl;
+    cin>>n;
+    
+    for(int i=2; i<=n; i++){
+        if(n%i==0){
+        count++;
+        }
+    }
+    
+    if(count==1){
+        cout<<"Prime Number"<<endl;
+    }
+    else{
+        cout<<"Not a prime Number"<<endl;
+    }
+
+return 0;
+}
+
+
+
+6 - Reverse a number
+
+#include<iostream>
+using namespace std;
+
+
+int main(){
+
+    int n,r,sum=0;
+
+    cout<<"Enter the Number: "<<endl;
+    cin>>n;
+
+    while(n!=0)
+    {
+
+        r=n%10;
+        sum = sum*10 + r;
+        n=n/10;
+    }
+    cout<<"Reverse No is : "<<sum<<endl;
+
+    return 0;
+}
+
+7- Reverse a String
+
+#include<iostream>
+using namespace std;
+
+int main() {
+    string str, reversed;
+    cout << "Enter a string: ";
+    cin >> str;
+
+    // Reverse the string manually
+    for (int i = str.length() - 1; i >= 0; i--) {
+        reversed += str[i];
+    }
+
+    cout << "Reversed string: " << reversed << endl;
+    return 0;
+}
+
+
+8 - Reverse an Array
+
+#include<iostream>
+using namespace std;
+
+
+int main(){
+
+    int arr[] = {5,10,20,30,40,50};
+    int length = sizeof(arr)/sizeof(arr[0]);
+    for(int i=length-1; i>=0; i--){
+        cout<<arr[i];
+        cout<<" ";
+
+    }
+}
+
+9 - Reverse an string
+
+#include<iostream>
+#include<string.h>
+using namespace std;
+
+int main(){
+
+    char str[]="Sagar";
+    int length = strlen(str);
+    for(int i=length-1; i>=0; i--){
+        cout <<str[i];
+
+    }
+    return 0;
+
+
+}
+
+10 - Factorial of given number
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+
+int f,n;
+cout<<"Enter NUmber: "<<endl;
+cin >> n;
+f=n;
+for(int i=1;i<n;i++)
+{
+    f=f*i;
+    
+}
+ cout<<f;
+
+
+    return 0;
+}
+
+--------------------------------------------------------------------------------------------------
+
+
+OOPs Concept
+1. Inheritance
+single inheritance
+
+#include <iostream>
+using namespace std;
+
+class Animal{
+    public:
+    void Eat(){
+        cout<<"Eat"<<endl;
+    }
+};
+
+class Dog: public Animal{
+    public:
+    void sound(){
+     
+        cout<<"Bark"<<endl;
+    }
+    
+};
+
+int main()
+{
+   Dog d;
+   d.Eat();
+   d.sound();
+   
+
+    return 0;
+}
+
+
+
+multiple inheritance
+
+class Base1 {
+    // Base class 1 members
+};
+
+class Base2 {
+    // Base class 2 members
+};
+
+class Derived : public Base1, public Base2 {
+    // Derived class members
+};
+
+multilevel inheritance
+
+class Base {
+    // Base class members
+};
+
+class Derived1 : public Base {
+    // Derived class 1 members
+};
+
+class Derived2 : public Derived1 {
+    // Derived class 2 members
+};
+
+
+Hierarchical Inheritance
+
+class Base {
+    // Base class members
+};
+
+class Derived1 : public Base {
+    // Derived class 1 members
+};
+
+class Derived2 : public Base {
+    // Derived class 2 members
+};
+
+
+hybrid inheritance: we can remove ambiguity by using scope resolution operator ex-  obj.AClass:: abc();
+class Base {
+    // Base class members
+};
+
+class Derived1 : virtual public Base {
+    // Derived class 1 members
+};
+
+class Derived2 : virtual public Base {
+    // Derived class 2 members
+};
+
+class Derived3 : public Derived1, public Derived2 {
+    // Derived class 3 members
+};
+
+
+
+
+
+
+--------------------------------------------------------------------
+
+2. Encapsulation
+
+#include <iostream>
+using namespace std;
+
+
+class student {
+    private:
+    string name;
+    int age;
+    
+    public:
+    string getName(){
+        return name;
+    }
+    
+    void setName(string name){
+        this->name=name;
+    }
+    
+    int getAge(){
+        return age;
+    }
+    
+    void setAge(int age){
+        this->age=age;
+    }
+};
+
+int main()
+{
+    student s;
+    s.setName("sagar");
+    s.setAge(24);
+    cout<<s.getName()<<endl;
+    cout<<s.getAge()<<endl;
+   
+
+    return 0;
+}
+
+
+3. Abstraction 
+
+#include <iostream>
+using namespace std;
+class abstraction {
+    private:
+        int a, b;
+    public:
+        // method to set values of private members 
+        void set(int x, int y) {
+            a = x;
+            b = y;
+        }
+    void display() {
+        cout << "a = " << a << endl;
+        cout << "b = " << b << endl;
+    }
+};
+int main() {
+    abstraction obj;
+    obj.set(10, 20);
+    obj.display();
+    return 0;
+}
+Output:
+a = 10
+b = 20
+
+4-Polymorphism-many forms
+
+1-compile time polymorphism
+function overloading 
+operator overloading
+2-Runtime polymorphism
+function overriding
+
+---function overloading----
+
+#include <iostream>
+using namespace std;
+ 
+// Function with two parameters
+int add(int num1, int num2) {
+    return num1 + num2;
+}
+ 
+// Function with three parameters
+int add(int num1, int num2, int num3) {
+    return num1 + num2 + num3;
+}
+ 
+int main() {
+ 
+    cout << add(10, 20) << endl;
+    cout << add(10, 20, 30);
+    return 0;
+}
+ 
+Output:
+30
+60
+
+---- Operator overloading-------
+
+#include<iostream>
+using namespace std;
+
+class Complex{
+private:
+    int a,b;
+    
+public:
+    void setData(int x, int y){
+        a=x;
+        b=y;
+    }
+    
+    Complex operator + (Complex c){
+        Complex temp;
+        temp.a=a+c.a;
+        temp.b=b+c.b;
+        return (temp);
+    }
+        
+    void display(){
+        cout<<a<<"+"<<b<<"i"<<endl;
+    }
+};
+
+int main(){
+    Complex c1,c2,c3;
+    c1.setData(4,5);
+    c2.setData(2,3);
+    c3=c1+c2; // You probably meant to add c1 and c2
+    c3.display();
+    return 0;
+}
+
+
+
+
+
+
+Runtime polymorphism
+function overriding----------------------
+
+
+
+#include<iostream>
+using namespace std;
+
+class A{
+    public:
+   
+    virtual void func(){
+        cout<<"hello word"<<endl;
+        
+    }
+    
+   
+};
+
+class B: public A{
+    public:
+    void func(){
+        cout<<"hello"<<endl;
+    }
+};
+
+int main(){
+    
+    A *ptr;
+    B obj;
+    ptr = &obj;
+    ptr->func();
+    
+    
+    
+    
+      return 0;
+    // B obj;
+    // obj.A::func();
+    // obj.func();
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
