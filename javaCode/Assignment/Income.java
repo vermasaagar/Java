@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Satish {
+public class Income {
   public static void main(String[] args) {
     try (Scanner scan = new Scanner(System.in)) {
       // Input basic pay, DA, HRA, and other allowances

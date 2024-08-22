@@ -1,1 +1,0 @@
-Food item: Daal, Quantity: 5, Price per item: 70.0, Payment mode: cash, Total sales: 350.0

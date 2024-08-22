@@ -1,11 +1,9 @@
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Iterator;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -71,10 +69,8 @@ public class FunctionalInterface {
         System.out.println();
         System.out.println("Supplier Example :");
         Supplier<String> xyz = () -> "Hello, world!";
-        Stream<String> stream =  Stream.generate(xyz).limit(5);
+        Stream<String> stream =  Stream.generate(xyz).limit(2);
         stream.forEach(System.out::println);
 
-
-        
         }
     }
