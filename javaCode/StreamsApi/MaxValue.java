@@ -12,7 +12,7 @@ public class MaxValue{
         List<Integer> list = Arrays.asList(21, 12, 11, 15, 17, 32, 29);
         int x = list.stream().max(Integer::compare).orElse(null);
         System.out.println(x);
-        
+    
     }
     
 }
