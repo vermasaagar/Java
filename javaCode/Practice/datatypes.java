@@ -1,3 +1,5 @@
+
+package Practice;
 public class datatypes {
     
     public static void main(String[] args) {

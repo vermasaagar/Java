@@ -1,3 +1,5 @@
+
+package Practice;
 class RBI
 {
   protected double minInterestRate;

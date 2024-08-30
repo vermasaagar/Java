@@ -1,4 +1,7 @@
 
+
+package Practice;
+
 import java.util.*;
 public class function1 {
 

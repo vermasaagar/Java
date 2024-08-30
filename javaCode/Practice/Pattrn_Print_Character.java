@@ -1,3 +1,6 @@
+
+package Practice;
+
 public class Pattrn_Print_Character {
 
     public static void main(String[] args) {

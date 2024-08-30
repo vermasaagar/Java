@@ -1,4 +1,4 @@
-
+package Practice;
 enum Status{
     running, failed, pending, success;
 

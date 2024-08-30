@@ -1,3 +1,7 @@
+
+
+package Practice;
+
 public class Pattrn_HalfPyramid {
 
     public static void main(String[] args) {

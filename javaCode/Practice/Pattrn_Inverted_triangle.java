@@ -1,3 +1,7 @@
+
+
+package Practice;
+
 public class Pattrn_Inverted_triangle {
 
     public static void main(String[] args) {

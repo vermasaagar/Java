@@ -1,3 +1,6 @@
+
+package Practice;
+
 interface A{
     void show();
 }

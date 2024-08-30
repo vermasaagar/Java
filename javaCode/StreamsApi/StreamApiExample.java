@@ -1,3 +1,5 @@
+
+package StreamsApi;
 import java.util.ArrayList;
 
 public class StreamApiExample {

@@ -1,4 +1,6 @@
 
+package Practice;
+
 import java.util.*;
 public class gstbill {
     public static void main(String[] args) {

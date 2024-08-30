@@ -1,3 +1,5 @@
+
+package Practice;
 public class binarytodecimal {
 
     public static void bintodec(int binNum) {

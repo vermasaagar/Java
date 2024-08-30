@@ -1,5 +1,7 @@
 
 
+package Practice;
+
 
 // taking input from user old version
 

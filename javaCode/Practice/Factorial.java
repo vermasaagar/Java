@@ -1,4 +1,7 @@
- import java.util.*;
+
+
+package Practice;
+import java.util.*;
 
  public class Factorial {
 

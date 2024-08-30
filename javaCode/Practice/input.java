@@ -1,4 +1,7 @@
 
+
+package Practice;
+
 import java.util.*;//packages have many classes
 
 public class input{

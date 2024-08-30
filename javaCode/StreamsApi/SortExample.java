@@ -1,4 +1,6 @@
 
+
+package StreamsApi;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -15,5 +17,6 @@ public class SortExample {
         List<Integer> list2 = list.stream().sorted().collect(Collectors.toList());
         System.out.println(list2);
     }
+
     
 }

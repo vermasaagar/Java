@@ -1,3 +1,6 @@
+
+package Practice;
+
 import java.util.*;
 public class ExceptMul_10 {
     public static void main(String[] args) {

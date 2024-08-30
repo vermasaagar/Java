@@ -1,3 +1,5 @@
+
+package Practice;
 public class Banking {
 
 	private static final int MIN_PASSWORD_LENGTH = 6;
